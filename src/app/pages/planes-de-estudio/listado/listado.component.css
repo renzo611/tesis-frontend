@@ -1,0 +1,99 @@
+.container {
+  padding: 20px;
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.container-bis {
+  padding: 10px;
+  background-color: #2b2b2b;
+  color: white;
+  margin-bottom: 5px;
+  padding-bottom: 0.2px;
+}
+
+.custom-form-field {
+  width: 200px; /* Ajusta el tamaño según tus necesidades */
+}
+
+::ng-deep .custom-form-field .mat-form-field-wrapper {
+  padding: 0; /* Ajusta el padding si es necesario */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.nuevo-btn {
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+
+.config-btn {
+  color: white;
+}
+
+
+.mat-form-field {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  background-color: #424242;
+}
+
+th.mat-header-cell, td.mat-cell {
+  color: white;
+}
+
+.mat-paginator {
+  background-color: #424242;
+  color: white;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: flex-start; /* Alinea a la derecha */
+  margin-bottom: 10px; /* Ajusta según sea necesario */
+}
+
+.compact-search {
+  width: 200px; /* Ajusta este valor según el tamaño deseado */
+}
+
+/* Reduce el tamaño del campo de entrada */
+.compact-search .mat-form-field-flex {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Reduce el tamaño de la fuente y el padding */
+.compact-search .mat-form-field-infix {
+  padding: 0.5em 0;
+  font-size: 14px;
+}
+
+/* Ajusta el tamaño del icono */
+.compact-search .mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Opcional: ajusta el color del borde y el fondo */
+.compact-search .mat-form-field-outline {
+  background-color: #424242;
+}
+
+.compact-search .mat-form-field-outline-thick {
+  color: #666;
+}

@@ -1,0 +1,49 @@
+<!-- dashboard.component.html -->
+<mat-card class="dashboard-card">
+    <mat-card-header>
+      <div mat-card-avatar class="dashboard-header-icon">
+        <mat-icon>dashboard</mat-icon>
+      </div>
+      <mat-card-title>Dashboard</mat-card-title>
+      <mat-card-subtitle>Bienvenido, {{username}}!</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Bienvenido {{username}} al dashboard! Aquí puedes encontrar información importante y accesos rápidos a las funciones más utilizadas.</p>
+  
+      <!-- Example of additional dashboard content -->
+      <div class="dashboard-content">
+        <mat-grid-list cols="2" rowHeight="200px">
+          <mat-grid-tile>
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>Resumen</mat-card-title>
+                <mat-card-subtitle>Visión general de tus actividades</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Detalles rápidos de tus últimas actividades.</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>Ver más</button>
+              </mat-card-actions>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>Notificaciones</mat-card-title>
+                <mat-card-subtitle>Últimas alertas y mensajes</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <p>Mantente al día con las notificaciones recientes.</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>Ver más</button>
+              </mat-card-actions>
+            </mat-card>
+          </mat-grid-tile>
+          <!-- Add more mat-grid-tile as needed -->
+        </mat-grid-list>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

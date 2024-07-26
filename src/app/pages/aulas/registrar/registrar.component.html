@@ -1,0 +1,21 @@
+<form class="example-form" [formGroup]="form">
+  <h4 class="form-title">REGISTRAR AULAS</h4>
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Capacidad</mat-label>
+    <input type="number" matInput formControlName="capacity">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Tipo de Aula</mat-label>
+    <mat-select formControlName="classroomType">
+      <mat-option *ngFor="let classroomType of classroomType" [value]="classroomType">{{ classroomType }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="registrar()">REGISTRAR</button>
+ 
+</form>

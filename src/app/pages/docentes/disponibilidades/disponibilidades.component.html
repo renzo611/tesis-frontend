@@ -1,0 +1,59 @@
+<div>
+    <h2>Disponibilidades Existentes</h2>
+    <table mat-table [dataSource]="existingAvailabilities" class="mat-elevation-z8">
+      <ng-container matColumnDef="day">
+        <th mat-header-cell *matHeaderCellDef> Día </th>
+        <td mat-cell *matCellDef="let availability"> {{availability.day}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="startTime">
+        <th mat-header-cell *matHeaderCellDef> Hora de Inicio </th>
+        <td mat-cell *matCellDef="let availability"> {{availability.startTime}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="endTime">
+        <th mat-header-cell *matHeaderCellDef> Hora de Fin </th>
+        <td mat-cell *matCellDef="let availability"> {{availability.endTime}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="['day', 'startTime', 'endTime']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['day', 'startTime', 'endTime'];"></tr>
+    </table>
+  </div>
+  
+  <div>
+    <h2>Agregar Disponibilidades</h2>
+    <form [formGroup]="newAvailabilitiesForm" (ngSubmit)="onSubmit()">
+      <div formArrayName="availabilities">
+        <div *ngFor="let availability of availabilities.controls; let i=index" [formGroupName]="i">
+          <mat-form-field>
+            <mat-label>Día</mat-label>
+            <mat-select formControlName="day">
+              <mat-option *ngFor="let day of daysOfWeek" [value]="day">{{ day }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <mat-label>Hora de inicio</mat-label>
+            <input matInput formControlName="startTime" type="time">
+          </mat-form-field>
+  
+          <mat-form-field>
+            <mat-label>Hora de fin</mat-label>
+            <input matInput formControlName="endTime" type="time">
+          </mat-form-field>
+  
+          <button mat-icon-button color="warn" type="button" (click)="removeNewAvailability(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+  
+      <button mat-raised-button color="primary" type="button" (click)="addNewAvailability()">
+        <mat-icon>add</mat-icon> Añadir Disponibilidad
+      </button>
+  
+      <button mat-raised-button color="accent" type="submit">Registrar</button>
+    </form>
+  </div>
+  

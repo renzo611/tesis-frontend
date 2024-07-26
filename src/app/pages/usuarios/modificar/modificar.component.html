@@ -1,0 +1,30 @@
+<form class="example-form" [formGroup]="form">
+  <h4 class="form-title">ACTUALIZAR USUARIO</h4>
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Apellido</mat-label>
+    <input matInput formControlName="lastName">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre de Usuario</mat-label>
+    <input matInput formControlName="userName">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <mat-label>Rol</mat-label>
+    <mat-select formControlName="role">
+      <mat-option *ngFor="let rol of rols" [value]="rol">{{ rol }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="modificar()">ACTUALIZAR</button>
+</form>

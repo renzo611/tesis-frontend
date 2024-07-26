@@ -1,0 +1,17 @@
+.example-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  

@@ -1,0 +1,21 @@
+.example-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  min-width: 400px;
+  margin: 0 auto; /* Para centrar horizontalmente */
+}
+.example-full-width {
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 15px; /* Espaciado entre los campos */
+}
+
+.mat-input-element {
+  font-size: 14px; /* Tamaño del texto dentro del input */
+  padding: 4px 8px; /* Ajusta el padding según sea necesario */
+}

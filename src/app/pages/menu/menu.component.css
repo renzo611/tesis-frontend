@@ -1,0 +1,26 @@
+.logout-button {
+    margin-left: auto;
+  }
+
+
+.app-title {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.container {
+  padding: 20px;
+}
+
+.mat-list-item .mat-icon {
+  margin-right: 16px; /* Ajusta el espacio entre el icono y el texto */
+  vertical-align: middle; /* Alinea verticalmente el icono con el texto */
+}
+
+.mat-toolbar .account-button {
+  margin-left: auto; /* Mueve el botón de cuenta a la derecha */
+}

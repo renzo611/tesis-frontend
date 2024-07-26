@@ -1,0 +1,38 @@
+<form class="example-form" [formGroup]="form">
+  <h4 class="form-title">REGISTRAR MATERIA</h4>
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Cantidad de inscriptos</mat-label>
+    <input matInput formControlName="numberRegistered">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Periodo</mat-label>
+    <mat-select formControlName="periodType">
+      <mat-option *ngFor="let p of period" [value]="p">{{ p }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Año de Carrera</mat-label>
+    <input matInput formControlName="subjectYear">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Horas semanales</mat-label>
+    <input matInput formControlName="weeklyLoad">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Plan de estudio</mat-label>
+    <mat-select formControlName="studyPlan">
+      <mat-option *ngFor="let plan of planes" [value]="plan">{{plan.name}} - {{ plan.career.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="registrar()">REGISTRAR</button>
+</form>

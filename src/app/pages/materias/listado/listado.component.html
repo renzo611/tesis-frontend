@@ -1,0 +1,75 @@
+
+<div class="container-bis">
+  <div class="header">
+    <h2>CARRERAS</h2>
+    <div class="actions">
+      <button mat-raised-button color="primary" class="nuevo-btn" (click)="registrar()">+ Nuevo</button>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+    <mat-form-field appearance="outline" class="custom-form-field">
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput type="text" (keyup)="applyFilter($event)" placeholder="Buscar..">
+    </mat-form-field>
+   
+
+  <table mat-table [dataSource]="materias" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="numberRegistered">
+      <th mat-header-cell *matHeaderCellDef> Alumnos Inscriptos </th>
+      <td mat-cell *matCellDef="let element"> {{element.numberRegistered}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="periodType">
+      <th mat-header-cell *matHeaderCellDef>Periodo </th>
+      <td mat-cell *matCellDef="let element"> {{element.periodType}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="subjectYear">
+      <th mat-header-cell *matHeaderCellDef> Año de Carrera </th>
+      <td mat-cell *matCellDef="let element"> {{element.subjectYear}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="weeklyLoad">
+      <th mat-header-cell *matHeaderCellDef> Horas Semanales </th>
+      <td mat-cell *matCellDef="let element"> {{element.weeklyLoad}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="studyPlan">
+      <th mat-header-cell *matHeaderCellDef> Plan de Estudio </th>
+      <td mat-cell *matCellDef="let element"> {{element.studyPlan}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="Opciones">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <a matTooltip="Ver detalles" (click)="verDetalles(element.id)">
+          <mat-icon>visibility</mat-icon>
+        </a>
+        <a matTooltip="Eliminar" (click)="eliminar(element.id)">
+          <mat-icon style="color: red;">delete</mat-icon>
+        </a>
+        <a matTooltip="Actualizar" style="color: green;" (click)="modificar(element.id)">
+          <mat-icon>edit</mat-icon>
+        </a>
+        
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>

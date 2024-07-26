@@ -1,0 +1,15 @@
+<form class="example-form" [formGroup]="form">
+  <h4 class="form-title">REGISTRAR CARRERA</h4>
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Carrera</mat-label>
+    <mat-select formControlName="career">
+      <mat-option *ngFor="let carr of carreras" [value]="carr">{{ carr.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="registrar()">REGISTRAR</button>
+</form>

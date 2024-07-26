@@ -1,0 +1,43 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../../../../assets/fondo2.jpg');
+    background-size: cover; /* Esto hace que la imagen cubra todo el contenedor */
+    background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+    background-position: center; /* Esto centra la imagen */
+  }
+  
+  .login-card {
+    width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Color blanco con 80% de opacidad */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .login-actions {
+    display: flex;
+  flex-direction: column; /* Hace que los botones se apilen uno debajo del otro */
+  align-items: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Espacio entre los botones */
+  margin-top: 1rem;
+  }
+
+  .spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Para asegurarse de que el spinner esté centrado sobre la tarjeta */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+}

@@ -1,0 +1,65 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar>
+      <span>Menu</span>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a routerLink="./usuarios" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <span>Usuarios</span>
+      </a>
+      <a routerLink="./aulas" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>class</mat-icon>
+        <span>Aulas</span>
+      </a>
+      <a routerLink="./docentes" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>school</mat-icon>
+        <span>Docentes</span>
+      </a>
+      <a routerLink="./carreras" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>domain</mat-icon>
+        <span>Carreras</span>
+      </a>
+      <a routerLink="./planes-de-estudio" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>menu_book</mat-icon>
+        <span>Planes de estudio</span>
+      </a>
+      <a routerLink="./materias" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>auto_stories</mat-icon>
+        <span>Materias</span>
+      </a>
+      <a routerLink="./timetable" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>event</mat-icon>
+        <span>Horarios</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-toolbar class="main-toolbar">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span class="app-title" (click)="dashboard()">GESTION DE ESPACIOS FISICOS</span>
+
+    <!-- Submenu in the toolbar -->
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="account-button">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="cambiarContrasenia()">
+        <mat-icon>vpn_key</mat-icon>
+        <span>Cambiar Contraseña</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Cerrar Sesión</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
